@@ -9,5 +9,5 @@ RUN apt-get install -y -q software-properties-common \
  && sed -i 's/^#\s*\(deb.*multiverse\)$/\1/g' /etc/apt/sources.list \
  && apt-get -q -y update \
  && apt-get dist-upgrade -y --no-install-recommends \
- && DEBIAN_FRONTEND=noninteractive apt-get install -y -q vim.tiny nano git subversion curl unzip wget exim4 logrotate cron supervisor
-
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y -q vim nano curl unzip wget logrotate cron supervisor \
+ && mkdir -p /var/log/supervisor
