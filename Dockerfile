@@ -11,3 +11,5 @@ RUN apt-get install -y -q software-properties-common \
  && apt-get dist-upgrade -y --no-install-recommends \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y -q vim nano curl unzip wget logrotate cron supervisor unattended-upgrades \
  && mkdir -p /var/log/supervisor
+
+ADD config/* /etc/
