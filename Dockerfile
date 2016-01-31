@@ -12,4 +12,4 @@ RUN apt-get install -y -q software-properties-common \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y -q vim nano curl unzip wget logrotate cron supervisor unattended-upgrades gettext-base \
  && mkdir -p /var/log/supervisor
 
-ADD config/* /etc/
+ADD ./config /etc/
