@@ -4,8 +4,6 @@ FROM ubuntu:trusty
 # Basic config
 RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y update \
  && apt-get install -y -q software-properties-common \
- && add-apt-repository -y "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) multiverse" \
- && add-apt-repository -y "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc)-updates multiverse" \
  && sed -i 's/^#\s*\(deb.*universe\)$/\1/g' /etc/apt/sources.list \
  && sed -i 's/^#\s*\(deb.*multiverse\)$/\1/g' /etc/apt/sources.list \
  && apt-get -q -y update \
