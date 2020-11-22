@@ -1,5 +1,5 @@
 # Runnable base
-FROM ubuntu:bionic
+FROM ubuntu:focal
 
 # Basic config
 RUN apt-get -q -y update \
