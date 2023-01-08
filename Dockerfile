@@ -1,5 +1,5 @@
 # Runnable base
-FROM ubuntu:focal
+FROM ubuntu:jammy
 
 # Basic config
 RUN apt-get -q -y update \
